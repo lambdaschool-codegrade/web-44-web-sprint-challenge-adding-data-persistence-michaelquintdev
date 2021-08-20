@@ -14,7 +14,7 @@ router.get('/', async (req, res, next) => {
     }
 })
 
-router.post('/', validatePost, async (req, res, next) => {
+router.post('/', async (req, res, next) => {
     try{
         const obj = await Task.add(req.body)
         res.status(201).json(obj)
